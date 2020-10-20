@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linkLayout"
+            android:layout_toLeftOf="@id/like_follow_btn">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="45dp"
+                android:src="@drawable/avatar"
+                android:layout_height="45dp"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="0.5dp"
+                android:id="@+id/like_profile_image"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/like_profile_image"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="17sp"
+                    android:text="username"
+                    android:textColor="@color/black"
+                    android:id="@+id/like_user_username"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/like_user_username"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey"
+                    android:text="full name"
+                    android:id="@+id/like_user_full_name"
+                    />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:textSize="12sp"
+            android:text="@string/follow"
+            android:textColor="@color/white"
+            android:id="@+id/like_follow_btn"
+            android:textStyle="bold"
+            android:background="@drawable/btn_round_corners_follow"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

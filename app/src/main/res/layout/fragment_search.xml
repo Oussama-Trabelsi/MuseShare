@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.mvvm.view.fragment.SearchFragment">
+
+    <!-- Searchbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_relLayoutTop">
+
+        <include layout="@layout/snippet_searchbar"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/search_relLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="match_parent"
+        android:id="@+id/search_listView">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

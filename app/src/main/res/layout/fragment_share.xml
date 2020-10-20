@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9EBEE"
+    tools:context="com.mvvm.view.fragment.ShareFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayoutTop">
+
+        <include layout="@layout/snippet_top_singleposttoolbar"/>
+
+    </RelativeLayout>
+
+    <!-- only show when no track is selected -->
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/default_player_layout"
+        android:layout_below="@id/relLayoutTop"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_soundcloud"
+            android:id="@+id/player_intro_ic"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Share a track with your followers to get their feedback"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:layout_toRightOf="@id/player_intro_ic"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_below="@id/default_player_layout"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/relLayout1">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:src="@drawable/avatar"
+                android:layout_height="60dp"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="0.5dp"
+                android:id="@+id/post_profile_image"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"/>
+
+            <RelativeLayout
+                android:id="@+id/relLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/post_profile_image"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="17sp"
+                    android:text="username"
+                    android:textColor="@color/black"
+                    android:id="@+id/post_username"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:id="@id/relLayout3"
+            android:layout_below="@id/relLayout1">
+
+            <EditText
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_round_corners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="4"
+                android:minHeight="100dp"
+                android:ellipsize="end"
+                android:padding="20dp"
+                android:textColorHint="@color/grey"
+                android:hint="Write something ..."
+                android:textColor="@color/black"
+                android:id="@+id/post_description"
+                android:textSize="14sp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/relLayout4"
+            android:layout_below="@id/relLayout3">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/post_track_icon"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_default_track"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:minHeight="80dp"
+                android:layout_marginRight="80dp"
+                android:textSize="15sp"
+                android:textColorHint="@color/grey"
+                android:hint="Give a name to your track"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/post_track_icon"
+                android:id="@+id/post_track_name" />
+
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/post_load_track"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_cloud_upload_black_24dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/separator"
+            android:layout_below="@id/relLayout4"
+            android:background="@drawable/grey_border_bottom"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/relLayout5"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/separator">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/comment_layout">
+
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/post_comment_tv"
+                    android:text="Share"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/separator2"
+            android:layout_below="@id/relLayout5"
+            android:background="@drawable/grey_border_bottom"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

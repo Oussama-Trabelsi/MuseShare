@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:background="@color/white"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/relLayout"
+        android:layout_height="70dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="65dp"
+            android:src="@drawable/avatar"
+            android:layout_height="65dp"
+            app:civ_border_color="@color/grey"
+            app:civ_border_width="2dp"
+            android:id="@+id/following_user_profile_image"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/followingisOnlineCircle"
+            android:src="@drawable/ic_circle_online"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="51dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relLayout"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/following_name"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="firstName"/>
+
+
+
+</RelativeLayout>

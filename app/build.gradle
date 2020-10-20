@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.haerul.swipeviewpager"
+        minSdkVersion 28
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation 'com.etebarian:meow-bottom-navigation:1.0.4'
+
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    // Design library for Coordinator Layout and Toolbars
+    implementation 'androidx.coordinatorlayout:coordinatorlayout'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'net.danlew:android.joda:2.10.3'
+
+    implementation "androidx.emoji:emoji:1.0.0"
+
+    // bassem stuff
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.1'
+    implementation 'androidx.navigation:navigation-fragment:2.0.0'
+    implementation 'androidx.navigation:navigation-ui:2.0.0'
+    implementation 'com.github.billthefarmer:mididriver:v1.17'
+    //implementation 'com.github.BeppiMenozzi:Knob:1.9.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+    implementation 'com.github.chenupt.android:springindicator:1.0.2@aar'
+    implementation 'com.github.chenupt.android:multiplemodel:1.1.0@aar'
+    implementation 'com.google.guava:guava:18.0'
+    //implementation 'com.rengwuxian.materialedittext:library:2.0.3'
+
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+    compile "androidx.core:core-ktx:+"
+    compile "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+
+}
+repositories {
+    mavenCentral()
+}

@@ -1,0 +1,122 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/white_grey_border_bottom">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/mp_avatar"
+                android:src="@drawable/ic_default_track"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/mp_elements"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/mp_avatar">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Track name"
+                    android:id="@+id/mp_trackname"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Track Owner"
+                    android:id="@+id/mp_track_owner"
+                    android:textColor="@color/link_blue"
+                    android:textSize="13dp"
+                    android:layout_below="@id/mp_trackname"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:layout_below="@id/mp_trackname"
+                    android:layout_toRightOf="@id/mp_track_owner"
+                    android:text="Shared this track"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/grey"/>
+                
+                <SeekBar
+                    android:layout_width="250dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mp_seekbar"
+                    android:layout_below="@id/mp_track_owner"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0:11"
+                    android:id="@+id/mp_current_time"
+                    android:textColor="@color/grey"
+                    android:textSize="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_below="@id/mp_seekbar"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-1:49"
+                    android:id="@+id/mp_total_time"
+                    android:textColor="@color/grey"
+                    android:textSize="12dp"
+                    android:layout_below="@id/mp_seekbar"
+                    android:layout_marginLeft="210dp"/>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:layout_centerVertical="true"
+                android:layout_height="30dp"
+                android:id="@+id/mp_play_btn"
+                android:src="@drawable/ic_play_button"
+                android:layout_alignParentRight="true"/>
+
+
+            <!-- only show when no track is selected -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:id="@+id/default_player_layout"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_soundcloud"
+                    android:id="@+id/player_intro_ic"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/welcome_message"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:layout_toRightOf="@id/player_intro_ic"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </merge>
+
+

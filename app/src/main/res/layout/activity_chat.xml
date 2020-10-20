@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.mvvm.view.ChatActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout1">
+
+        <include layout="@layout/snippet_top_chattoolbar"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:background="@drawable/edittext_round_corners"
+        android:layout_marginLeft="10dp"
+        android:maxLines="1"
+        android:id="@+id/chat_search"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/relLayout1"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/black"
+        android:hint="Search..."
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/grey"
+        android:textSize="15sp"
+        android:layout_height="55dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_below="@id/chat_search"
+        android:id="@+id/following_recyclerView">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/following_recyclerView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conversations"
+            android:id="@+id/conversations_tv"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/conversations_tv"
+            android:id="@+id/convetsation_recyclerView">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+    </RelativeLayout>

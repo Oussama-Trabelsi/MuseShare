@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320dp"
+    android:layout_height="220dp"
+    android:background="@color/white"
+    tools:context="com.mvvm.view.ConfirmUnfollowActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/following_profile_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/colorAccent"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/avatar" />
+
+    <TextView
+        android:layout_below="@id/following_profile_image"
+        android:layout_width="250dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/following_username"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:text="@string/requestAgain"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/separator"
+        android:background="@drawable/grey_border_bottom"/>
+
+        <TextView
+            android:layout_width="159.5dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Cancel"
+            android:id="@+id/cancel"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:id="@+id/separator1"
+            android:layout_toRightOf="@id/cancel"
+            android:background="@drawable/white_grey_border_bottom"/>
+
+
+        <TextView
+            android:layout_width="159.5dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Unfollow"
+            android:id="@+id/unfollow"
+            android:layout_toRightOf="@id/separator1"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

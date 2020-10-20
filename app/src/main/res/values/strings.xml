@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SwipeViewPager</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2_activityaa">Main2Activityaa</string>
+
+    <!-- Intent Extras -->
+    <string name="calling_activity">calling_activity</string>
+    <!-- activity names -->
+    <string name="home_activity">Home Activity</string>
+    <string name="edit_profile_activity">Edit Profile Activity</string>
+
+    <!-- fragment names -->
+    <string name="profile_fragment">Profile</string>
+    <string name="follow">FOLLOW</string>
+    <string name="private_account_info">When your account is private, only people you approve can see your posts. Your existing followers won\'t be affected</string>
+    <string name="welcome_message">Welcome to whole new world of sound discovery. Select a track to start listening</string>
+    <string name="requestAgain">If you change your mind, you\'ll have to request to follow \@AndroiX again.</string>
+</resources>

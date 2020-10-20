@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/conv_relLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <RelativeLayout
+            android:id="@+id/conv_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="75dp"
+                android:src="@drawable/avatar"
+                android:layout_height="75dp"
+                app:civ_border_color="@color/grey"
+                app:civ_border_width="2dp"
+                android:id="@+id/following_user_profile_image"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/followingisOnlineCircle"
+                android:src="@drawable/ic_circle_online"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="61dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="70dp"
+            android:id="@+id/relLayout"
+            android:layout_toRightOf="@+id/conv_avatar"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:text="username"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/conv_username"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/conv_username">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textSize="18sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey"
+                    android:text="@string/private_account_info"
+                    android:id="@+id/content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/content"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey"
+                    android:text="12:05 AM"
+                    android:id="@+id/date" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/circle_new"
+            android:src="@drawable/ic_delivered"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

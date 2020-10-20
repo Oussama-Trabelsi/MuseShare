@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:orientation="vertical"
+    android:background="@drawable/bg_background">
+
+    <EditText
+        android:id="@+id/register_username"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="@drawable/input_field"
+        android:hint="Username" />
+
+    <EditText
+        android:id="@+id/register_firstName"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:background="@drawable/input_field"
+        android:inputType="textPersonName"
+        android:hint="First Name" />
+
+    <EditText
+        android:id="@+id/register_lastName"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:background="@drawable/input_field"
+        android:inputType="textPersonName"
+        android:hint="Last Name" />
+
+    <EditText
+        android:id="@+id/register_email"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_marginBottom="10dp"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp"
+        android:background="@drawable/input_field"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Email" />
+
+    <EditText
+        android:id="@+id/register_password"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_marginBottom="10dp"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp"
+        android:background="@drawable/input_field"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/register_confirm"
+        android:layout_marginBottom="10dp"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp"
+        android:background="@drawable/button"
+        android:text="Create account"
+        android:onClick="RegisterAction"/>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="20dp"
+            android:textSize="24dp"
+            android:text="Already have an account ?" />
+
+        <TextView
+            android:id="@+id/back_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#e94d62"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="Login" />
+    </LinearLayout>
+
+</LinearLayout>

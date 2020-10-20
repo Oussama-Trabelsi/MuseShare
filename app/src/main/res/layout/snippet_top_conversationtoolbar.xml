@@ -1,0 +1,98 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/white_grey_border_bottom"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ConvToolBar">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/conv_avatar"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="55dp"
+                        android:src="@drawable/avatar"
+                        android:layout_height="55dp"
+                        app:civ_border_color="@color/grey"
+                        app:civ_border_width="2dp"
+                        android:id="@+id/profile_image"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/OnlineCircle"
+                        android:src="@drawable/ic_circle_online"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="50dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:layout_marginRight="40dp"
+                    android:layout_toRightOf="@id/conv_avatar">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Username"
+                        android:textSize="17sp"
+                        android:id="@+id/reciever_name"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="5dp" />
+
+                    <TextView
+                        android:layout_below="@id/reciever_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Active 20 minutes ago"
+                        android:id="@+id/activedate"
+                        android:textSize="14sp"
+                        android:textColor="@color/grey"
+                        android:layout_marginStart="5dp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/chat_backArrow"
+                    android:src="@drawable/ic_exitt"/>
+
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</merge>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context="com.mvvm.view.fragment.ProfileFragment"
+    android:weightSum="5">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_relLayoutTop">
+
+        <include layout="@layout/snippet_top_profilebar"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_profile_image"
+            android:layout_width="200dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/colorAccent"
+            android:layout_centerVertical="true"
+            android:src="@drawable/avatar" />
+
+        <LinearLayout
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="1dp">
+
+                    <TextView
+                        android:id="@+id/profile_post_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="26"
+                        android:textSize="18dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Posts"
+                        android:layout_gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/rabelo"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/followersLayout"
+                    android:layout_marginLeft="20dp">
+
+                    <TextView
+                        android:id="@+id/profile_followers_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="252"
+                        android:textSize="18dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Followers"
+                        android:fontFamily="@font/rabelo"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/followingLayout"
+                    android:layout_marginLeft="20dp">
+
+                    <TextView
+                        android:id="@+id/profile_following_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="319"
+                        android:textSize="18dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Following"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/rabelo"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/colorBlack"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:id="@+id/profile_frameLayout"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <Button
+                    android:id="@+id/profile_edit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Edit Profile"
+                    android:textSize="15dp"
+                    android:background="@drawable/btn_round_corners"
+                    android:fontFamily="@font/rabelo"
+                    android:textColor="@color/colorBlack"/>
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/profile_fullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FirstName LastName"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/rabelo"
+            android:textSize="18dp"
+            android:layout_marginBottom="3dp"/>
+
+        <TextView
+            android:id="@+id/profile_bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="lorem ipsum lorem ipsum"
+            android:fontFamily="@font/rabelo"
+            android:textSize="17dp"
+            android:maxLines="4"
+            android:textColor="@color/colorBlack"/>
+    </LinearLayout>
+
+    <!-- upgrade to premium section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout9"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/textlines"
+            android:textColor="@color/black"
+            android:text="Shared tracks"
+            android:gravity="center"
+            android:textSize="22dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </RelativeLayout>
+
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:horizontalSpacing="1dp"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="1dp">
+
+
+    </GridView>
+
+</LinearLayout>

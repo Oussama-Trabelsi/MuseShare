@@ -1,0 +1,324 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="20dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/edit_profile_photo"
+                android:src="@drawable/avatar"
+                android:layout_marginTop="20dp"
+                app:civ_border_color="@color/colorAccent"
+                app:civ_border_width="2dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Photo"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:id="@+id/changeProfilePhoto"
+                android:layout_below="@+id/edit_profile_photo"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"/>
+
+
+
+            <!-- username section -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/changeProfilePhoto"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/grey_border_bottom"
+                android:id="@+id/relLayout1">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/tag"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_profile_username"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:background="@null"
+                    android:inputType="textNoSuggestions"
+                    android:text="username"
+                    android:textColor="@color/colorBlack"/>
+
+            </RelativeLayout>
+
+
+            <!-- firstname section -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/relLayout1"
+                android:background="@drawable/grey_border_bottom"
+                android:id="@+id/relLayout2"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_shilouette"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_profile_firstName"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:background="@null"
+                    android:inputType="textNoSuggestions"
+                    android:text="firstName"
+                    android:textColor="@color/colorBlack"/>
+
+            </RelativeLayout>
+
+
+            <!-- lastname section -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/relLayout2"
+                android:background="@drawable/grey_border_bottom"
+                android:id="@+id/relLayout3"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/identification"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_profile_lastName"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:background="@null"
+                    android:inputType="textNoSuggestions"
+                    android:text="lastName"
+                    android:textColor="@color/colorBlack"/>
+
+            </RelativeLayout>
+
+
+            <!-- description section -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/relLayout3"
+                android:background="@drawable/grey_border_bottom"
+                android:id="@+id/relLayout4"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_description"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/description"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:background="@null"
+                    android:inputType="textNoSuggestions"
+                    android:text="bio"
+                    android:textColor="@color/colorBlack"/>
+
+            </RelativeLayout>
+
+            <!-- email section -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/relLayout3"
+                android:background="@drawable/grey_border_bottom"
+                android:id="@+id/relLayout5"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/envelope"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_profile_email"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:background="@null"
+                    android:inputType="textNoSuggestions"
+                    android:text="Email"
+                    android:textColor="@color/colorBlack"/>
+
+            </RelativeLayout>
+
+            <!-- bio section -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/relLayout5"
+                android:background="@drawable/grey_border_bottom"
+                android:id="@+id/relLayout6"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/edit"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_profile_bio"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:background="@null"
+                    android:inputType="textNoSuggestions"
+                    android:text="Bio"
+                    android:textColor="@color/colorBlack"/>
+
+            </RelativeLayout>
+
+            <!-- private mode section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/relLayout6"
+                android:id="@+id/relLayout8"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/private_network"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="265dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:background="@null"
+                    android:inputType="textNoSuggestions"
+                    android:text="Private account"
+                    android:textSize="18dp"
+                    android:textColor="@color/colorBlack"/>
+
+                <ToggleButton
+                    android:id="@+id/edit_profile_toggle_private"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayout8"
+                android:id="@+id/relLayout11"
+                android:layout_marginTop="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:textColor="@color/grey"
+                    android:text="@string/private_account_info"
+                    android:textSize="18dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+            </RelativeLayout>
+
+
+            <!-- change password section -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayout11"
+                android:id="@+id/relLayout10"
+                android:layout_marginTop="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:id="@+id/edit_profile_change_pwd"
+                    android:background="@drawable/textlines"
+                    android:textColor="@color/colorAccent"
+                    android:text="Change password"
+                    android:gravity="center"
+                    android:textSize="22dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <!-- upgrade to premium section -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayout10"
+                android:id="@+id/relLayout9"
+                android:layout_marginTop="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:id="@+id/edit_profile_upgrade"
+                    android:background="@drawable/textlines"
+                    android:textColor="@color/colorAccent"
+                    android:text="Upgrade to premium"
+                    android:gravity="center"
+                    android:textSize="22dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+    </merge>
+
+

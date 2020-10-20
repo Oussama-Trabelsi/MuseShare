@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/messageRelLayoutMe"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:maxWidth="250dp"
+            android:minWidth="50dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/sent_messageMe"
+            android:layout_marginBottom="10dp"
+            android:textSize="17sp"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@drawable/tv_round_corners_sentmessage"
+            android:text="hola amigo"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/messageRelLayout"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:src="@drawable/avatar"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="0.5dp"
+            android:id="@+id/sender_profile_image"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:maxWidth="250dp"
+            android:minWidth="50dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/sent_message"
+            android:layout_marginBottom="10dp"
+            android:textSize="17sp"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@drawable/tv_round_corners_sentmessage"
+            android:text="hola amigo"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+
+
+

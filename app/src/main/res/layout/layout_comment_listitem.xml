@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/commentLayout">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:src="@drawable/avatar"
+            android:layout_height="50dp"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="0.5dp"
+            android:id="@+id/user_profile_image"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/user_profile_image"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:layout_centerVertical="true"
+            android:id="@+id/comment_username"
+            android:textColor="@color/dark_blue"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/comment_delete"
+            android:src="@drawable/ic_rubbish_bin"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commentLayouttv"
+        android:layout_below="@id/commentLayout">
+
+        <TextView
+            android:id="@+id/comment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/tv_round_corners"
+            android:padding="20dp"
+            android:text="comment content"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/commentLikesLayout"
+        android:background="@drawable/shadow_drawable"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:layout_below="@id/commentLayouttv">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/like_image"
+            android:src="@drawable/ic_liked"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="17"
+            android:id="@+id/commentLikesCount"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorAccent"
+            android:layout_toRightOf="@id/like_image"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/commentLayouttv"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Like"
+            android:id="@+id/comment_like_tv"
+            android:textColor="@color/grey"
+            android:textSize="17sp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 hours ago"
+            android:layout_toRightOf="@id/comment_like_tv"
+            android:id="@+id/comment_date"
+            android:textColor="@color/grey"
+            android:textSize="17sp"
+            android:layout_marginLeft="20dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+

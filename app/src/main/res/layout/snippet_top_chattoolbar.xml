@@ -1,0 +1,55 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/white_grey_border_bottom"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/singlePostToolBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/chat_backArrow"
+                    android:src="@drawable/ic_backarrow"/>
+
+                <TextView
+                    android:layout_toRightOf="@+id/chat_backArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Chat"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_fountain_pen_close_up"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/newMessage"/>
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</merge>
